@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    background-color: #f0f0f0; /* Cor única de fundo (cinza claro) */
+    color: #333;
+    margin: 0;
+    padding: 0; /* Removido o padding para o body */
+}
+
+.navbar {
+    background-color: #28a745; /* Verde da barra de navegação */
+    padding: 15px; /* Padding para a barra */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para a barra */
+}
+
+.nav-list {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: center; /* Centraliza os itens */
+    margin: 0; /* Remove margem */
+    padding: 0; /* Remove padding */
+}
+
+.nav-list li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor do texto */
+    font-weight: 700; /* Texto em negrito */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.nav-list a:hover {
+    color: #34d058; /* Verde mais claro ao passar o mouse */
+}
+
+h1 {
+    color: #28a745; /* Cor verde sólida */
+    text-align: center;
+    font-size: 3em; /* Tamanho maior */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+p {
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #34d058; /* Verde mais claro ao passar o mouse */
+}
+
+.btn.secondary {
+    background-color: #007bff; /* Azul para o botão secundário */
+}
+
+.btn.secondary:hover {
+    background-color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}

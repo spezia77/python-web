@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'calculadora.css' %}">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form action="/sistema/calcular">
+        <label for="numero1">Numero 1</label>
+        <input type="number" id="numero1" name="numero1">
+        <label for="numero2">Numero 2</label>
+        <input type="number" id="numero2" name="numero2">
+        <button type="submit">Somar</button>
+    </form>
+</body>
+</html>

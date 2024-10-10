@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte simples e legível */
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da tela inteira */
+    margin: 0;
+}
+
+h1 {
+    color: #333; /* Cor do texto do cabeçalho */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+form {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Largura fixa do formulário */
+}
+
+label {
+    display: block; /* Cada label ocupa uma linha */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    color: #555; /* Cor do texto das labels */
+}
+
+input[type="number"] {
+    width: 100%; /* Largura total do input */
+    padding: 10px; /* Padding interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+button {
+    width: 100%; /* Largura total do botão */
+    padding: 10px; /* Padding interno */
+    background-color: #28a745; /* Cor verde */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para cor */
+}
+
+button:hover {
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+}
