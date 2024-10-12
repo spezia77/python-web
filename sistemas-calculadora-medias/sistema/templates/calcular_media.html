@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        div {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+        }
+        .status {
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .aprovado {
+            color: green;
+        }
+        .reprovado {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Média</h1>
+        <p>Média final: <span>{{ media_final }}</span></p>
+        <p>Aprovado ou reprovado?</p>
+        <p>{{ status }}</p>
+    </div>
+</body>
+</html>
