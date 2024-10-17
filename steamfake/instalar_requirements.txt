@@ -1,0 +1,4 @@
+py -m venv env
+env\Script\activate
+pip install -r requeriments.txt
+py manage.py migrate

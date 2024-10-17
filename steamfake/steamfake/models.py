@@ -12,7 +12,16 @@ class Categoria(models.Model):
     nome = models.CharField(max_length=23, unique=True)
 
     def __str__(self):
-        return self.nome    
+        return self.nome
+
+
+class Tag(models.Model):
+    nome = models.CharField(max_length=23, unique=True)
+    desc = models.CharField(max_length=30, blank=True, null=True)
+
+    def __str__(self):
+        return self.nome, self.desc
+    
 
 # class Aluno(models.Model):
 #     nome = models.CharField(max_length=10) # VARCHAR
