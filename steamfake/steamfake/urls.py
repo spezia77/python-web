@@ -17,5 +17,11 @@ urlpatterns = [
     path("tags/apagar/<int:id>", views.tag_apagar),
     path("tags/editar/<int:id>", views.tag_editar),
     path("tags/editado/<int:id>", views.tag_editado),
+    path("jogo", views.jogo_index, name="jogo"),
+    path("jogo/cadastro", views.jogo_cadastro),
+    # path("jogo/cadastrar", views.tag_cadastrar),
+    # path("jogo/apagar/<int:id>", views.tag_apagar),
+    # path("jogo/editar/<int:id>", views.tag_editar),
+    # path("jogo/editado/<int:id>", views.tag_editado),
 
 ]

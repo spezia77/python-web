@@ -1,6 +1,8 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
-from steamfake.models import Categoria, Tag
+from steamfake.forms import JogoForm
+from steamfake.models import Categoria, Jogos, Tag
+
 
 # Create your views here.
 
@@ -103,3 +105,27 @@ def tag_editado(request: HttpRequest, id:int) -> HttpResponse:
     tag.nome = nome
     tag.save()
     return redirect("tags")
+
+
+def jogo_index(request: HttpRequest) -> HttpResponse:
+    jogos = Jogos.objects.all()
+    return render(request, "jogos/index.html", context={"jogos":jogos})
+
+
+def jogo_cadastro(request: HttpRequest) -> HttpResponse:
+    if request.method == 'GET':
+        form = JogoForm()
+        return render(request, "jogos/cadastro.html", context={"form": form})
+    else: 
+        form = JogoForm(request.POST, request.FILES)
+        if form.isvalid():
+            jogo = Jogos()
+            jogo.nome = form.cleaned_data["nome"]
+            jogo.descricao = form.cleaned_data["descricao"]
+            jogo.valor = form.cleaned_data["valor"]
+            jogo.data_lancamento = form.cleaned_data["data_lancamento"]
+            jogo.desenvolvedora = form.cleaned_data["desenvolvedora"]
+            jogo.categoria = Categoria.objects.first()
+            jogo.save()
+            return redirect("jogos")
+        return render(request, "jogos/cadastro.html", context={"form": form})

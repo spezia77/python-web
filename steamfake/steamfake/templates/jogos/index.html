@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1 class="title">
+  Lista de Jogos
+</h1>
+<a href="/steamfake/jogo/cadastro" class="button is-link mb-2 
+      is-pulled-right">
+  <span class="icon is-small">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span>Novo Jogo</span>
+</a>
+<table class="table is-bordered is-striped is-hoverable is-fullwidth">
+  <thead>
+    <tr class="is-link">
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for jogo in jogos %}
+    <tr>
+      <td>{{ jogo.pk }}</td>
+      <td>{{ jogo.nome }}</td>
+      <td>
+        <a href="/steamfake/jogo/editar/{{jogo.id}}">Editar</a>
+        <a href="/steamfake/jogo/apagar/{{jogo.id}}">Apagar</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
